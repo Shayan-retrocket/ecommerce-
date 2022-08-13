@@ -1,0 +1,42 @@
+.heroContainer {
+	background-color: var(--bg);
+	height: 100vh;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	background: rgb(239, 237, 231);
+	background: linear-gradient(
+		180deg,
+		rgba(239, 237, 231, 1) 0%,
+		rgba(239, 237, 231, 1) 9%,
+		rgba(239, 237, 231, 1) 20%,
+		rgba(255, 255, 255, 1) 100%
+	);
+}
+.heroContainer::after {
+	content: '';
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	right: 10%;
+	top: 0;
+	background-color: var(--secondary);
+	z-index: 0;
+	clip-path: polygon(50% 40%, 0% 100%, 100% 100%);
+}
+.heroContainer img {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+	width: 60%;
+}
+.heroText {
+	margin-left: 50px;
+	font-size: 20px;
+}
+.heroText h1 {
+	font-size: 80px;
+	margin-bottom: 30px;
+}

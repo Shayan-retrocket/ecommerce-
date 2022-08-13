@@ -20,3 +20,9 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
 }
+:root {
+	--bg: #efede7;
+	--primary: #146c78;
+	--secondary: #0e91a1;
+	--last: #7dce94;
+}
