@@ -8,7 +8,6 @@ const Categories = () => {
 			.get(' https://api.escuelajs.co/api/v1/categories')
 			.then(function (response) {
 				setCategories(response.data);
-				console.log(response.data);
 			})
 			.catch(function (error) {
 				alert(error);
@@ -29,7 +28,9 @@ const Categories = () => {
 			<div className='categoryImage'>
 				{categories.map((item) => (
 					<div key={item.id} className='categoryCard'>
-						<h2>{item.name}</h2>
+						<div className='categoryName'>
+							<h5>{item.name}</h5>
+						</div>
 						<img className='categoryBg' src={item.image} alt={item.name} />
 					</div>
 				))}

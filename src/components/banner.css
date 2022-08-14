@@ -1,0 +1,29 @@
+.bannerContainer {
+	width: 100%;
+	position: relative;
+	height: 80vh;
+	display: flex;
+}
+.bannerItem {
+	width: 60%;
+	height: 100%;
+}
+.bannerItem img {
+	width: 100%;
+}
+.bannerItem::after {
+	content: '';
+	width: 100vw;
+	height: 80vh;
+
+	left: 0;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.671);
+	z-index: 2;
+}
+/* .bannerItem:first-child {
+	clip-path: polygon(0 0, 100% 0%, 75% 100%, 0% 100%);
+}
+.bannerItem:last-child {
+	clip-path: polygon(25% 0, 100% 0%, 100% 100%, 0% 100%);
+} */

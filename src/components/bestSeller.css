@@ -1,0 +1,123 @@
+.bestSellerContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: rgb(239, 237, 231);
+	background: linear-gradient(
+		180deg,
+		rgba(239, 237, 231, 1) 0%,
+		rgba(239, 237, 231, 1) 9%,
+		rgba(239, 237, 231, 1) 20%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	padding-bottom: 100px;
+	padding-top: 50px;
+	position: relative;
+}
+.bestSellerContainer::after {
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 80%;
+	left: 0;
+	bottom: 0;
+	background-color: var(--primary);
+	z-index: 0;
+	clip-path: polygon(0 50%, 0 100%, 100% 100%);
+
+	opacity: 0.9;
+	/* transform: translateY(50%); */
+}
+.bestSellerContainer > h1 {
+	margin-bottom: 70px;
+}
+.bestSellerSection {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	z-index: 1;
+}
+.productCard {
+	width: 18%;
+	background-color: white;
+	box-shadow: var(--shadow);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	position: relative;
+	/* justify-content: stretch; */
+	align-self: stretch;
+	margin-bottom: 30px;
+}
+.productCard img {
+	width: 100%;
+
+	/* margin-bottom: 30px; */
+}
+.productprice {
+	position: absolute;
+	z-index: 5;
+	left: 50%;
+	bottom: 0;
+	width: 25%;
+	aspect-ratio: 1;
+	transform: translate(-50%, 50%) rotate(45deg);
+	background: var(--bg);
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+		rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+		rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	background-color: black;
+	color: var(--bg);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.productprice h5 {
+	transform: rotate(-45deg);
+}
+.productImg {
+	position: relative;
+}
+.proDetail {
+	margin-top: 50px;
+	padding: 0 15px;
+	padding-bottom: 20px;
+	text-align: center;
+	padding-bottom: 0;
+}
+.proDetail p {
+	margin: 20px 0;
+}
+.cardActions {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+.cardActions button {
+	background-color: var(--primary);
+	border: none;
+	font-size: 15px;
+	color: var(--bg);
+	padding: 10px 25px;
+	cursor: pointer;
+	color: white;
+	box-shadow: var(--shadow);
+	clip-path: polygon(15% 0, 0 25%, 0% 100%, 85% 100%, 100% 75%, 100% 0);
+}
+.Seeall {
+	background-color: black;
+	border: none;
+	margin-top: 100px;
+	font-size: 20px;
+	color: white;
+	padding: 15px 35px;
+	cursor: pointer;
+	color: white;
+	box-shadow: var(--shadow);
+	/* clip-path: polygon(15% 0, 0 25%, 0% 100%, 85% 100%, 100% 75%, 100% 0); */
+}

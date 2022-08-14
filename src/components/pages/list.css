@@ -1,0 +1,8 @@
+.listContainer {
+	display: flex;
+	width: 90%;
+	margin-left: 5%;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+}

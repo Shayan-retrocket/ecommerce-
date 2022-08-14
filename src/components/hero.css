@@ -24,6 +24,7 @@
 	background-color: var(--secondary);
 	z-index: 0;
 	clip-path: polygon(50% 40%, 0% 100%, 100% 100%);
+	opacity: 0.8;
 }
 .heroContainer img {
 	position: absolute;
