@@ -6,14 +6,14 @@ import { Route, Routes } from 'react-router-dom';
 import axios from 'axios';
 function App() {
 	//https://api.escuelajs.co/api/v1/categories
-	axios
-		.get(' https://api.escuelajs.co/api/v1/products')
-		.then(function (response) {
-			// console.log(response.data);
-		})
-		.catch(function (error) {
-			// console.error(error);
-		});
+	// axios
+	// 	.get(' https://api.escuelajs.co/api/v1/products')
+	// 	.then(function (response) {
+	// 		console.log(response.data);
+	// 	})
+	// 	.catch(function (error) {
+	// 		console.error(error);
+	// 	});
 	return (
 		<div className='App'>
 			{/* <Nav /> */}

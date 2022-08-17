@@ -18,7 +18,7 @@ const BestSeller = () => {
 	return (
 		<div className='container bestSellerContainer'>
 			<h1>bestSeller</h1>
-			{console.log(bestSeller)}
+
 			<div className='bestSellerSection'>
 				{bestSeller.map((item) => (
 					<Card
