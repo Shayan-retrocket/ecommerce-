@@ -21,31 +21,37 @@ const List = () => {
 		const get = async () => {
 			const data = await axios.get('https://api.escuelajs.co/api/v1/products');
 			setdata(data.data);
-			// itemNum(data.data.length);
 		};
 		get();
 	}, []);
+
 	return (
 		<div className='container listContainerParent'>
-			<h1>List</h1>
-			<div className='listContainer'>
-				{data.length &&
-					currentOfPage.map((item) => (
-						<Card
-							key={item.id}
-							title={item.title}
-							image={item.images[0]}
-							desc={item.description}
-							id={item.id}
-							price={item.price}
-						/>
-					))}
-			</div>
-			{itemNum > 9 && (
-				<Pagination
-					count={Math.ceil(itemNum / itemPerPage)}
-					page={currentPage}
-					onChange={paginate}></Pagination>
+			{data.length ? (
+				<>
+					<h1>List</h1>
+					<div className='listContainer'>
+						{data.length &&
+							currentOfPage.map((item) => (
+								<Card
+									key={item.id}
+									title={item.title}
+									image={item.images[0]}
+									desc={item.description}
+									id={item.id}
+									price={item.price}
+								/>
+							))}
+					</div>
+					{itemNum > 9 && (
+						<Pagination
+							count={Math.ceil(itemNum / itemPerPage)}
+							page={currentPage}
+							onChange={paginate}></Pagination>
+					)}{' '}
+				</>
+			) : (
+				<h1>Loading . . .</h1>
 			)}
 		</div>
 	);
