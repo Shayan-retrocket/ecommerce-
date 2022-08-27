@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsBasket3 } from 'react-icons/bs';
 import { AiOutlineHeart } from 'react-icons/ai';
-import { AiFillHeart } from 'react-icons/ai';
+
 const Card = ({ id, image, price, title, desc }) => {
 	return (
 		<div className='productCard'>
@@ -17,9 +17,9 @@ const Card = ({ id, image, price, title, desc }) => {
 			</div>
 			<hr style={{ width: '90%' }} />
 			<div className='cardActions'>
-				<BsBasket3 size={20}></BsBasket3>
+				<BsBasket3 size={20} cursor='pointer'></BsBasket3>
 				<button>more</button>
-				<AiOutlineHeart size={20}></AiOutlineHeart>
+				<AiOutlineHeart size={20} cursor='pointer'></AiOutlineHeart>
 			</div>
 		</div>
 	);

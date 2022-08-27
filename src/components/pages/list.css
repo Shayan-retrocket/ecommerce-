@@ -1,7 +1,18 @@
+.listContainerParent {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-bottom: 30px;
+}
+.listContainerParent h1 {
+	margin: 50px 0;
+}
 .listContainer {
 	display: flex;
 	width: 90%;
-	margin-left: 5%;
+	/* margin-left: 5%; */
 	flex-wrap: wrap;
 	align-items: flex-start;
 	justify-content: space-between;
