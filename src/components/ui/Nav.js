@@ -4,8 +4,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import './nav.css';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+
 const Nav = () => {
 	const items = useSelector((store) => store.basket);
+	const likes = useSelector((store) => store.like);
 
 	return (
 		<nav className='navContainer'>
@@ -30,9 +33,24 @@ const Nav = () => {
 						//   aria-controls={menuId}
 						aria-haspopup='true'
 						//   onClick={handleProfileMenuOpen}
-						color='inherit'>
+						color='inherit'
+						sx={{ marginRight: '10px' }}>
 						<Badge badgeContent={items.cartItems.length} color='error'>
 							<ShoppingBasket />
+						</Badge>
+					</IconButton>
+				</Link>
+				<Link to='likes'>
+					<IconButton
+						size='large'
+						edge='end'
+						aria-label='likes of current user'
+						//   aria-controls={menuId}
+						aria-haspopup='true'
+						//   onClick={handleProfileMenuOpen}
+						color='inherit'>
+						<Badge badgeContent={likes.likes.length} color='error'>
+							<FavoriteIcon />
 						</Badge>
 					</IconButton>
 				</Link>

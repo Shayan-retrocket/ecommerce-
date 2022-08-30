@@ -4,11 +4,16 @@ import { BsFillBasket3Fill } from 'react-icons/bs';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, removeFromCart } from '../features/basket';
+import { addToLike, removeFromLike } from '../features/likes';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import { Link } from 'react-router-dom';
 
 const Card = ({ id, image, price, title, desc }) => {
 	const dispatch = useDispatch();
 	const items = useSelector((store) => store.basket);
+	const likes = useSelector((store) => store.like);
 	const isIn = items.cartItems.find((item) => item === id);
+	const isInlikes = likes.likes.find((item) => item === id);
 	return (
 		<div className='productCard'>
 			<div className='productImg'>
@@ -19,7 +24,7 @@ const Card = ({ id, image, price, title, desc }) => {
 			</div>
 			<div className='proDetail'>
 				<h4>{title}</h4>
-				<p>{desc}</p>
+				<p>{desc.slice(0, 50)} . . . </p>
 			</div>
 			<hr style={{ width: '90%' }} />
 			<div className='cardActions'>
@@ -38,8 +43,22 @@ const Card = ({ id, image, price, title, desc }) => {
 							dispatch(removeFromCart(id));
 						}}></BsFillBasket3Fill>
 				)}
-				<button>more</button>
-				<AiOutlineHeart size={20} cursor='pointer'></AiOutlineHeart>
+				<Link to={`detail/${id}`}>
+					<button>More</button>
+				</Link>
+				{isInlikes === undefined ? (
+					<AiOutlineHeart
+						size={20}
+						cursor='pointer'
+						onClick={() => dispatch(addToLike(id))}></AiOutlineHeart>
+				) : (
+					<FavoriteIcon
+						size={20}
+						cursor='pointer'
+						onClick={() => {
+							dispatch(removeFromLike(id));
+						}}></FavoriteIcon>
+				)}
 			</div>
 		</div>
 	);

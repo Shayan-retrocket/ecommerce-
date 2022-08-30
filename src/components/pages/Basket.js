@@ -6,6 +6,7 @@ import { clearCart } from '../../features/basket';
 import { useSelector } from 'react-redux';
 
 const Basket = () => {
+	const dispatch = useDispatch();
 	const items = useSelector((store) => store.basket);
 	const data = useSelector((store) => store.data);
 	const value = items.cartItems.map((i) => {
@@ -37,14 +38,22 @@ const Basket = () => {
 				</div>
 				<div>
 					<div>
-						<h3>Clear Card</h3>
+						<h3
+							onClick={() => {
+								dispatch(clearCart());
+							}}>
+							Clear Card
+						</h3>
 					</div>
 				</div>
 				{/* <h1>Your Basket : </h1> */}
 			</div>
-			{value.map((item) => (
-				<BasketItem item={item}></BasketItem>
-			))}
+
+			{value.length ? (
+				value.map((item) => <BasketItem item={item}></BasketItem>)
+			) : (
+				<h2>Your card is empty</h2>
+			)}
 		</div>
 	);
 };
