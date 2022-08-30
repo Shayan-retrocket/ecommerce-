@@ -8,7 +8,7 @@ const Nav = () => {
 	const items = useSelector((store) => store.basket);
 
 	return (
-		<nav>
+		<nav className='navContainer'>
 			<div className='navItems'>
 				<span>
 					<Link to='/'>LOGO</Link>
@@ -21,7 +21,7 @@ const Nav = () => {
 				</span>
 				<span>Categories</span>
 			</div>
-			<div>
+			<div className='basketIconContainer'>
 				<Link to='basket'>
 					<IconButton
 						size='large'

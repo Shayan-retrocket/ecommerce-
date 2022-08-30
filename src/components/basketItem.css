@@ -9,8 +9,16 @@
 	box-shadow: var(--shadow);
 	padding: 0px 30px;
 	padding-left: 0;
+	z-index: 2;
+	/* background: rgb(249, 247, 240); */
 }
 .basketItemContainer img {
 	height: auto;
 	width: 30%;
+}
+.basketItemContainer button {
+	background-color: black;
+	padding: 10px 25px;
+	color: var(--bg);
+	cursor: pointer;
 }

@@ -14,8 +14,16 @@ const basketSlice = createSlice({
 			let isIn = state.cartItems.find((item) => item === payload);
 			if (isIn === undefined) state.cartItems.push(payload);
 		},
+		removeFromCart: (state, { payload }) => {
+			let isIn = state.cartItems.find((item) => item === payload);
+			if (isIn !== undefined) {
+				state.cartItems = state.cartItems.filter((item) => {
+					return item !== payload;
+				});
+			}
+		},
 	},
 });
 
 export default basketSlice.reducer;
-export const { clearCart, addToCart } = basketSlice.actions;
+export const { clearCart, addToCart, removeFromCart } = basketSlice.actions;

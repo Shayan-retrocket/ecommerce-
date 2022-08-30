@@ -3,7 +3,7 @@ import { BsBasket3 } from 'react-icons/bs';
 import { BsFillBasket3Fill } from 'react-icons/bs';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../features/basket';
+import { addToCart, removeFromCart } from '../features/basket';
 
 const Card = ({ id, image, price, title, desc }) => {
 	const dispatch = useDispatch();
@@ -31,7 +31,12 @@ const Card = ({ id, image, price, title, desc }) => {
 							dispatch(addToCart(id));
 						}}></BsBasket3>
 				) : (
-					<BsFillBasket3Fill size={20} cursor='pointer'></BsFillBasket3Fill>
+					<BsFillBasket3Fill
+						size={20}
+						cursor='pointer'
+						onClick={() => {
+							dispatch(removeFromCart(id));
+						}}></BsFillBasket3Fill>
 				)}
 				<button>more</button>
 				<AiOutlineHeart size={20} cursor='pointer'></AiOutlineHeart>
