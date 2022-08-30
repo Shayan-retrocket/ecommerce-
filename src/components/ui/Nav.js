@@ -2,8 +2,11 @@ import { ShoppingBasket } from '@mui/icons-material';
 import { Badge, IconButton } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import './nav.css';
 const Nav = () => {
+	const items = useSelector((store) => store.basket);
+
 	return (
 		<nav>
 			<div className='navItems'>
@@ -28,7 +31,7 @@ const Nav = () => {
 						aria-haspopup='true'
 						//   onClick={handleProfileMenuOpen}
 						color='inherit'>
-						<Badge badgeContent={17} color='error'>
+						<Badge badgeContent={items.cartItems.length} color='error'>
 							<ShoppingBasket />
 						</Badge>
 					</IconButton>

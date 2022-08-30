@@ -1,18 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './categories.css';
-import axios from 'axios';
+import { useSelector } from 'react-redux';
 const Categories = () => {
-	const [categories, setCategories] = useState([]);
-	useEffect(() => {
-		axios
-			.get(' https://api.escuelajs.co/api/v1/categories')
-			.then(function (response) {
-				setCategories(response.data);
-			})
-			.catch(function (error) {
-				alert(error);
-			});
-	}, []);
+	const categories = useSelector((store) => store.data.categoriesState);
 
 	return (
 		<div className='container categoriesContainer'>

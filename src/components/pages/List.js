@@ -3,10 +3,11 @@ import axios from 'axios';
 import './list.css';
 import Card from '../Card';
 import { Pagination } from '@mui/material';
+import { useSelector } from 'react-redux';
 const List = () => {
-	const [data, setdata] = useState([]);
+	// const [data, setdata] = useState([]);
+	const data = useSelector((store) => store.data.initialState);
 	const [currentPage, setCurrentPage] = useState(1);
-
 	/////////////////PAGINATION////////////////////
 	const itemNum = data.length;
 	const itemPerPage = 10;
@@ -17,13 +18,13 @@ const List = () => {
 	const paginate = (e, value) => {
 		setCurrentPage(value);
 	};
-	useEffect(() => {
-		const get = async () => {
-			const data = await axios.get('https://api.escuelajs.co/api/v1/products');
-			setdata(data.data);
-		};
-		get();
-	}, []);
+	// useEffect(() => {
+	// 	const get = async () => {
+	// 		const data = await axios.get('https://api.escuelajs.co/api/v1/products');
+	// 		setdata(data.data);
+	// 	};
+	// 	get();
+	// }, []);
 
 	return (
 		<div className='container listContainerParent'>
