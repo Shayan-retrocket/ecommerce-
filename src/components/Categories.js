@@ -5,7 +5,7 @@ const Categories = () => {
 	const categories = useSelector((store) => store.data.categoriesState);
 
 	return (
-		<div className='container categoriesContainer'>
+		<div className='container categoriesContainer' id='categoriesContainer'>
 			<div className='categoryText'>
 				<h1>Categories</h1>
 				<p>

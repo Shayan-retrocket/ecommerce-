@@ -18,14 +18,6 @@ const List = () => {
 	const paginate = (e, value) => {
 		setCurrentPage(value);
 	};
-	// useEffect(() => {
-	// 	const get = async () => {
-	// 		const data = await axios.get('https://api.escuelajs.co/api/v1/products');
-	// 		setdata(data.data);
-	// 	};
-	// 	get();
-	// }, []);
-
 	return (
 		<div className='container listContainerParent'>
 			{data.length ? (

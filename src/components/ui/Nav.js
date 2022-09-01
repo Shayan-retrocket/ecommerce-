@@ -22,7 +22,6 @@ const Nav = () => {
 				<span>
 					<Link to='products'>Products</Link>
 				</span>
-				<span>Categories</span>
 			</div>
 			<div className='basketIconContainer'>
 				<Link to='basket'>

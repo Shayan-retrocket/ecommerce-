@@ -130,7 +130,7 @@
 		flex-wrap: wrap;
 	}
 	.productCard {
-		width: 45%;
+		width: 47%;
 	}
 	.bestSellerContainer::after {
 		width: 100%;
@@ -139,5 +139,12 @@
 		bottom: 0;
 		z-index: 0;
 		clip-path: polygon(0 50%, 0 100%, 100% 100%);
+	}
+	.Seeall {
+		margin-top: 50px;
+
+		font-size: 15px;
+
+		/* clip-path: polygon(15% 0, 0 25%, 0% 100%, 85% 100%, 100% 75%, 100% 0); */
 	}
 }
