@@ -42,12 +42,13 @@
 }
 .categoryText {
 	text-align: center;
-	width: 50%;
+	width: 40%;
 	margin: 0 auto;
 	margin-bottom: 100px;
 	z-index: 2;
+	line-height: 1.7rem;
 }
-.categoryText > h2 {
+.categoryText > h1 {
 	margin-bottom: 30px;
 }
 .categoryCard {
@@ -101,4 +102,29 @@
 .categoryCard > .categoryName > h5 {
 	transform: rotate(-45deg);
 	font-size: 17px;
+}
+@media screen and (max-width: 600px) {
+	.categoriesContainer::after {
+		width: 90%;
+		height: 50%;
+		left: 5%;
+		top: 0;
+	}
+	.categoryCard {
+		width: 45%;
+		margin-bottom: 20px;
+	}
+	.categoryImage {
+		flex-wrap: wrap;
+	}
+	.categoryText {
+		width: 80%;
+
+		margin-bottom: 50px;
+
+		line-height: 1.7rem;
+	}
+	.categoryText > h1 {
+		margin-bottom: 30px;
+	}
 }

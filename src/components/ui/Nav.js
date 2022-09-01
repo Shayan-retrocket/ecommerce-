@@ -34,7 +34,7 @@ const Nav = () => {
 						aria-haspopup='true'
 						//   onClick={handleProfileMenuOpen}
 						color='inherit'
-						sx={{ marginRight: '10px' }}>
+						id='ShoppingBasket'>
 						<Badge badgeContent={items.cartItems.length} color='error'>
 							<ShoppingBasket />
 						</Badge>

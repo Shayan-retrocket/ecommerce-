@@ -39,6 +39,7 @@ const Basket = () => {
 				<div>
 					<div>
 						<h3
+							style={{ cursor: 'pointer' }}
 							onClick={() => {
 								dispatch(clearCart());
 							}}>

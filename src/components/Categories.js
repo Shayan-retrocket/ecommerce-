@@ -7,12 +7,11 @@ const Categories = () => {
 	return (
 		<div className='container categoriesContainer'>
 			<div className='categoryText'>
-				<h2>this is a title</h2>
+				<h1>Categories</h1>
 				<p>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates
 					velit iusto in eum deserunt pariatur perspiciatis odit eius magnam
-					explicabo dolores neque esse saepe, maxime optio repudiandae
-					praesentium vero fuga?
+					explicabo dolores
 				</p>
 			</div>
 			<div className='categoryImage'>

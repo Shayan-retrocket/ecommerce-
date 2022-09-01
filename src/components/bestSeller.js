@@ -1,20 +1,13 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './bestSeller.css';
 import Card from './Card';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 const BestSeller = () => {
-	const [bestSeller, setBestSeller] = useState([]);
-	useEffect(() => {
-		const get = async () => {
-			const data = await axios.get(' https://api.escuelajs.co/api/v1/products');
-			const cut = Math.ceil(Math.random() * 202);
-			const cutadd = cut + 5;
-			const cuttedData = data.data.slice(cut, cutadd);
-			setBestSeller(cuttedData);
-		};
-		get();
-	}, []);
+	const items = useSelector((store) => store.data.initialState);
+	const cut = 15;
+	const cutadd = cut + 5;
+	const bestSeller = items.slice(cut, cutadd);
 	return (
 		<div className='container bestSellerContainer'>
 			<h1>bestSeller</h1>

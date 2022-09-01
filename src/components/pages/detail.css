@@ -1,3 +1,23 @@
 .detailContainer {
-	margin-top: 200px;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.detail {
+	width: 60%;
+	background-color: var(--bg);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-right: 30px;
+	box-shadow: var(--shadow);
+}
+.detail img {
+	width: 50%;
+	margin-right: 30px;
+}
+.detailText > * {
+	margin: 15px 0;
 }

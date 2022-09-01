@@ -13,6 +13,7 @@
 		rgba(239, 237, 231, 1) 20%,
 		rgba(255, 255, 255, 1) 100%
 	);
+	overflow: hidden;
 }
 .heroContainer::after {
 	content: '';
@@ -36,8 +37,39 @@
 .heroText {
 	margin-left: 50px;
 	font-size: 20px;
+	z-index: 2;
 }
 .heroText h1 {
 	font-size: 80px;
 	margin-bottom: 30px;
+}
+@media screen and (max-width: 600px) {
+	.heroContainer {
+		flex-direction: column;
+	}
+	.heroContainer::after {
+		border: 1px solid #000;
+		width: 90%;
+		height: 50%;
+		right: 5%;
+		top: 50%;
+	}
+	.heroContainer img {
+		position: absolute;
+		right: -10%;
+		bottom: 0;
+		width: 120%;
+	}
+	.heroText h1 {
+		font-size: 35px;
+	}
+	.heroText {
+		margin-left: 25px;
+		font-size: 15px;
+		margin-top: 150px;
+	}
+	.heroText p {
+		width: 80%;
+		line-height: 1.5rem;
+	}
 }
