@@ -18,3 +18,8 @@
 	align-items: flex-start;
 	justify-content: space-between;
 }
+@media screen and (max-width: 600px) {
+	.listContainerParent {
+		margin-top: 50px;
+	}
+}

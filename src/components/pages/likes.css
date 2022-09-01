@@ -9,3 +9,11 @@
 .likeContainer h1 {
 	margin-bottom: 50px;
 }
+@media screen and (max-width: 600px) {
+	.likeContainer {
+		margin-top: 100px !important;
+	}
+	.likeContainer h1 {
+		margin-bottom: 30px;
+	}
+}

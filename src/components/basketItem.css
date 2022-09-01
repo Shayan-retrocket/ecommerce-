@@ -20,5 +20,26 @@
 	background-color: black;
 	padding: 10px 25px;
 	color: var(--bg);
+	border: none;
 	cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+	.basketItemContainer {
+		width: 90%;
+		margin-bottom: 20px;
+		padding: 0px 10px;
+		padding-left: 0;
+		font-size: 1rem;
+	}
+	.basketItemContainer p {
+		font-size: 0.9rem;
+		text-align: center;
+	}
+	.basketItemContainer img {
+		height: auto;
+		width: 30%;
+	}
+	.basketItemContainer button {
+		padding: 5px 10px;
+	}
 }

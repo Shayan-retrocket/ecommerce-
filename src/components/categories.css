@@ -109,6 +109,7 @@
 		height: 50%;
 		left: 5%;
 		top: 0;
+		transform: translateY();
 	}
 	.categoryCard {
 		width: 45%;

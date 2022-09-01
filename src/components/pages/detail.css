@@ -21,3 +21,18 @@
 .detailText > * {
 	margin: 15px 0;
 }
+@media screen and (max-width: 600px) {
+	.detail {
+		flex-direction: column;
+		width: 80%;
+		text-align: center;
+		padding-right: 0;
+	}
+	.detail img {
+		width: 100%;
+		margin-right: 0;
+	}
+	.detailText {
+		padding: 0 10px;
+	}
+}
